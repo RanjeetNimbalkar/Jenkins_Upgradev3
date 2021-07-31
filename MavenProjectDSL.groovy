@@ -7,10 +7,9 @@ job('First_Maven_Project_DSL')
 	triggers{
 		scm('* * * * *')
 	}
-	step {
+	steps {
 		maven('clean, package', 'java-tomcat-sample/pom.xml')
-		
-	}
+			}
 	publishers{
 		archiveArtifacts '**/*.jar'
 	}
